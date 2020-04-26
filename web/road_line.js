@@ -1,5 +1,5 @@
-function RoadLine() {
-  this.show = function() {
+class RoadLine{
+  show() {
     noStroke()
     fill(255)
     rect(110, 0, 20, 600)

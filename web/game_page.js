@@ -1,5 +1,5 @@
-function GamePage() {
-  this.show = function() {
+class GamePage{
+  show() {
     if (start_game && end_game == false) {
       background(100);
       roadLine.show()
@@ -18,9 +18,6 @@ function GamePage() {
       tree.update()
       tree.show()
     }
-
-    
-
 
     if (keyIsDown(UP_ARROW)) {
       brokenLine.setDir(13)

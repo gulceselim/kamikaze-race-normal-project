@@ -1,6 +1,6 @@
-function GameOverPage() {
+class GameOverPage {
 
-  this.show = function() {
+  show() {
     if (end_game) {
       background(0);
       textSize(32);

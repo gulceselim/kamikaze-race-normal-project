@@ -1,12 +1,12 @@
-function IntroPage() {
+class IntroPage {
 
-  this.show = function() {
+  show() {
     background(100);
     roadLine.show()
     grass.show()
     brokenLine.show()
     opponent.show()
-    tree.show()
+    tree.show();
     
     fill(0);
     rect(385, 515, 10, 10)

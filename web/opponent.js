@@ -1,125 +1,126 @@
-function Opponent() {
+class Opponent {
+  constructor(){
+    this.body = [];
+    this.wheel = [];
 
-  this.body = [];
-  this.wheel = [];
+    this.isOvertakenBy = false;
 
-  this.isOvertakenBy = false;
-
-  this.w = 50;
-  this.h = 60;
-
-
-
-  this.r = random(0, 255);
-  this.g = random(0, 255);
-  this.b = random(0, 255);
-
-  this.r2 = random(0, 255);
-  this.g2 = random(0, 255);
-  this.b2 = random(0, 255);
-
-  this.r3 = random(0, 255);
-  this.g3 = random(0, 255);
-  this.b3 = random(0, 255);
-
-  this.r4 = random(0, 255);
-  this.g4 = random(0, 255);
-  this.b4 = random(0, 255);
-
-  this.r5 = random(0, 255);
-  this.g5 = random(0, 255);
-  this.b5 = random(0, 255);
-
-  this.r6 = random(0, 255);
-  this.g6 = random(0, 255);
-  this.b6 = random(0, 255);
-
-  this.r7 = random(0, 255);
-  this.g7 = random(0, 255);
-  this.b7 = random(0, 255);
-
-
-  this.r8 = random(0, 255);
-  this.g8 = random(0, 255);
-  this.b8 = random(0, 255);
+    this.w = 50;
+    this.h = 60;
 
 
 
-  this.body[3] = createVector(270, 510)
-  this.body[4] = createVector(280, 520)
-  this.body[5] = createVector(285, 525)
-  this.wheel[4] = createVector(265, 515)
-  this.wheel[5] = createVector(265, 555)
-  this.wheel[6] = createVector(315, 515)
-  this.wheel[7] = createVector(315, 555)
+    this.r = random(0, 255);
+    this.g = random(0, 255);
+    this.b = random(0, 255);
 
-  this.body[6] = createVector(160, 50)
-  this.body[7] = createVector(170, 60)
-  this.body[8] = createVector(175, 65)
-  this.wheel[8] = createVector(155, 55)
-  this.wheel[9] = createVector(155, 95)
-  this.wheel[10] = createVector(205, 55)
-  this.wheel[11] = createVector(205, 95)
+    this.r2 = random(0, 255);
+    this.g2 = random(0, 255);
+    this.b2 = random(0, 255);
 
-  this.body[9] = createVector(390, 10)
-  this.body[10] = createVector(400, 20)
-  this.body[11] = createVector(405, 25)
-  this.wheel[12] = createVector(385, 15)
-  this.wheel[13] = createVector(385, 55)
-  this.wheel[14] = createVector(435, 15)
-  this.wheel[15] = createVector(435, 55)
+    this.r3 = random(0, 255);
+    this.g3 = random(0, 255);
+    this.b3 = random(0, 255);
 
+    this.r4 = random(0, 255);
+    this.g4 = random(0, 255);
+    this.b4 = random(0, 255);
 
-  this.body[12] = createVector(630, 510)
-  this.body[13] = createVector(640, 520)
-  this.body[14] = createVector(645, 525)
-  this.wheel[16] = createVector(625, 515)
-  this.wheel[17] = createVector(625, 555)
-  this.wheel[18] = createVector(675, 515)
-  this.wheel[19] = createVector(675, 555)
+    this.r5 = random(0, 255);
+    this.g5 = random(0, 255);
+    this.b5 = random(0, 255);
 
-  this.body[15] = createVector(505, 335)
-  this.body[16] = createVector(515, 345)
-  this.body[17] = createVector(520, 350)
-  this.wheel[20] = createVector(500, 340)
-  this.wheel[21] = createVector(500, 380)
-  this.wheel[22] = createVector(550, 340)
-  this.wheel[23] = createVector(550, 380)
+    this.r6 = random(0, 255);
+    this.g6 = random(0, 255);
+    this.b6 = random(0, 255);
 
-  this.body[18] = createVector(630, 180)
-  this.body[19] = createVector(640, 190)
-  this.body[20] = createVector(645, 195)
-  this.wheel[24] = createVector(625, 185)
-  this.wheel[25] = createVector(625, 225)
-  this.wheel[26] = createVector(675, 185)
-  this.wheel[27] = createVector(675, 225)
+    this.r7 = random(0, 255);
+    this.g7 = random(0, 255);
+    this.b7 = random(0, 255);
 
 
-  this.body[21] = createVector(270, 210)
-  this.body[22] = createVector(280, 220)
-  this.body[23] = createVector(285, 225)
-  this.wheel[28] = createVector(265, 215)
-  this.wheel[29] = createVector(265, 255)
-  this.wheel[30] = createVector(315, 215)
-  this.wheel[31] = createVector(315, 255)
-
-  this.body[24] = createVector(160, 370)
-  this.body[25] = createVector(170, 380)
-  this.body[26] = createVector(175, 385)
-  this.wheel[32] = createVector(155, 375)
-  this.wheel[33] = createVector(155, 415)
-  this.wheel[34] = createVector(205, 375)
-  this.wheel[35] = createVector(205, 415)
+    this.r8 = random(0, 255);
+    this.g8 = random(0, 255);
+    this.b8 = random(0, 255);
 
 
-  this.ydir2 = 0;
+
+    this.body[3] = createVector(270, 510)
+    this.body[4] = createVector(280, 520)
+    this.body[5] = createVector(285, 525)
+    this.wheel[4] = createVector(265, 515)
+    this.wheel[5] = createVector(265, 555)
+    this.wheel[6] = createVector(315, 515)
+    this.wheel[7] = createVector(315, 555)
+
+    this.body[6] = createVector(160, 50)
+    this.body[7] = createVector(170, 60)
+    this.body[8] = createVector(175, 65)
+    this.wheel[8] = createVector(155, 55)
+    this.wheel[9] = createVector(155, 95)
+    this.wheel[10] = createVector(205, 55)
+    this.wheel[11] = createVector(205, 95)
+
+    this.body[9] = createVector(390, 10)
+    this.body[10] = createVector(400, 20)
+    this.body[11] = createVector(405, 25)
+    this.wheel[12] = createVector(385, 15)
+    this.wheel[13] = createVector(385, 55)
+    this.wheel[14] = createVector(435, 15)
+    this.wheel[15] = createVector(435, 55)
 
 
-  this.setDirOfline = function(y) {
+    this.body[12] = createVector(630, 510)
+    this.body[13] = createVector(640, 520)
+    this.body[14] = createVector(645, 525)
+    this.wheel[16] = createVector(625, 515)
+    this.wheel[17] = createVector(625, 555)
+    this.wheel[18] = createVector(675, 515)
+    this.wheel[19] = createVector(675, 555)
+
+    this.body[15] = createVector(505, 335)
+    this.body[16] = createVector(515, 345)
+    this.body[17] = createVector(520, 350)
+    this.wheel[20] = createVector(500, 340)
+    this.wheel[21] = createVector(500, 380)
+    this.wheel[22] = createVector(550, 340)
+    this.wheel[23] = createVector(550, 380)
+
+    this.body[18] = createVector(630, 180)
+    this.body[19] = createVector(640, 190)
+    this.body[20] = createVector(645, 195)
+    this.wheel[24] = createVector(625, 185)
+    this.wheel[25] = createVector(625, 225)
+    this.wheel[26] = createVector(675, 185)
+    this.wheel[27] = createVector(675, 225)
+
+
+    this.body[21] = createVector(270, 210)
+    this.body[22] = createVector(280, 220)
+    this.body[23] = createVector(285, 225)
+    this.wheel[28] = createVector(265, 215)
+    this.wheel[29] = createVector(265, 255)
+    this.wheel[30] = createVector(315, 215)
+    this.wheel[31] = createVector(315, 255)
+
+    this.body[24] = createVector(160, 370)
+    this.body[25] = createVector(170, 380)
+    this.body[26] = createVector(175, 385)
+    this.wheel[32] = createVector(155, 375)
+    this.wheel[33] = createVector(155, 415)
+    this.wheel[34] = createVector(205, 375)
+    this.wheel[35] = createVector(205, 415)
+
+
+    this.ydir2 = 0;
+
+  }
+  
+  setDirOfline(y) {
     this.ydir2 = y;
   }
 
-  this.update = function() {
+  update() {
 
     if (this.body[3].y == 670) {
       this.r = random(0, 255);
@@ -313,7 +314,7 @@ function Opponent() {
 
 
 
-  this.show = function() {
+  show() {
 
 
     noStroke()
@@ -385,7 +386,7 @@ function Opponent() {
 
   }
 
-  this.hits = function(player) {
+  hits(player) {
     for (let i = 3; i <= 24; i += 3) {
       if (player.body[0].y < this.body[i].y + this.h && player.body[0].y + player.h > this.body[i].y) {
         if (player.body[0].x < this.body[i].x + this.w && player.body[0].x + player.w > this.body[i].x) {
@@ -395,7 +396,7 @@ function Opponent() {
     }
   }
 
-  this.overtakenBy = function(player) {
+  overtakenBy(player) {
     for (let i = 3; i <= 24; i += 3) {
       if (player.body[0].y < this.body[i].y) {
         return true;

@@ -1,4 +1,5 @@
-function BrokenLine() {
+class BrokenLine {
+  constructor(){
   this.cizgi = [];
 
   this.cizgi[0] = createVector(227, -80)
@@ -29,12 +30,14 @@ function BrokenLine() {
  
 
   this.ydir = 0;
+    
+  }
 
-  this.setDir = function(y) {
+  setDir(y) {
     this.ydir = y;
   }
 
-  this.update = function() {
+  update() {
 
     for (let i = 0; i <= 15; i += 5) {
       if (this.cizgi[i].y == 674) {
@@ -69,7 +72,7 @@ function BrokenLine() {
 
   }
 
-  this.show = function() {
+  show() {
     fill(255)
 
     for (let i = 0; i <= 19; i++) {

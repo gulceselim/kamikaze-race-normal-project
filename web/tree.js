@@ -1,39 +1,40 @@
-function Tree() {
+class Tree {
+  constructor(){
+    this.govde = [];
+    this.dal = [];
 
-  this.govde = [];
-  this.dal = [];
+    this.govde[0] = createVector(42.5, -80)
+    this.govde[1] = createVector(42.5, 70)
+    this.govde[2] = createVector(42.5, 220)
+    this.govde[3] = createVector(42.5, 370)
+    this.govde[4] = createVector(42.5, 520)
 
-  this.govde[0] = createVector(42.5, -80)
-  this.govde[1] = createVector(42.5, 70)
-  this.govde[2] = createVector(42.5, 220)
-  this.govde[3] = createVector(42.5, 370)
-  this.govde[4] = createVector(42.5, 520)
+    this.govde[5] = createVector(787.5, -80)
+    this.govde[6] = createVector(787.5, 70)
+    this.govde[7] = createVector(787.5, 220)
+    this.govde[8] = createVector(787.5, 370)
+    this.govde[9] = createVector(787.5, 520)
 
-  this.govde[5] = createVector(787.5, -80)
-  this.govde[6] = createVector(787.5, 70)
-  this.govde[7] = createVector(787.5, 220)
-  this.govde[8] = createVector(787.5, 370)
-  this.govde[9] = createVector(787.5, 520)
+    this.dal[0] = createVector(50, -80)
+    this.dal[1] = createVector(50, 70)
+    this.dal[2] = createVector(50, 220)
+    this.dal[3] = createVector(50, 370)
+    this.dal[4] = createVector(50, 520)
 
-  this.dal[0] = createVector(50, -80)
-  this.dal[1] = createVector(50, 70)
-  this.dal[2] = createVector(50, 220)
-  this.dal[3] = createVector(50, 370)
-  this.dal[4] = createVector(50, 520)
+    this.dal[5] = createVector(795, -80)
+    this.dal[6] = createVector(795, 70)
+    this.dal[7] = createVector(795, 220)
+    this.dal[8] = createVector(795, 370)
+    this.dal[9] = createVector(795, 520)
 
-  this.dal[5] = createVector(795, -80)
-  this.dal[6] = createVector(795, 70)
-  this.dal[7] = createVector(795, 220)
-  this.dal[8] = createVector(795, 370)
-  this.dal[9] = createVector(795, 520)
+    this.ydir = 0;
 
-  this.ydir = 0;
-
-  this.setDir = function(y) {
+  }
+  setDir(y) {
     this.ydir = y;
   }
 
-  this.update = function() {
+  update() {
 
       if (this.dal[0].y == 674) {
         this.dal[0].y = -80;
@@ -113,7 +114,7 @@ function Tree() {
 
   }
 
-  this.show = function() {
+  show() {
     fill(139, 69, 19)
     for (let i = 0; i <= 9; i++) {
 

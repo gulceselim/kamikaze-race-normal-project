@@ -1,6 +1,7 @@
 let start_game = false;
 let end_game = false;
 var scoreElem = 0;
+let tree;
 
 function setup() {
   createCanvas(845, 600);

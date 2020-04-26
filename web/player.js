@@ -1,21 +1,23 @@
-function Player() {
+class Player{
+  constructor(){
+    this.body = [];
+    this.wheel = [];
 
-  this.body = [];
-  this.wheel = [];
 
+    this.w = 50;
+    this.h = 60;
 
-  this.w = 50;
-  this.h = 60;
+    this.body[0] = createVector(390, 510)
+    this.body[1] = createVector(400, 520)
+    this.body[2] = createVector(405, 525)
+    this.wheel[0] = createVector(385, 515)
+    this.wheel[1] = createVector(385, 555)
+    this.wheel[2] = createVector(435, 515)
+    this.wheel[3] = createVector(435, 555)
+    
+  }
 
-  this.body[0] = createVector(390, 510)
-  this.body[1] = createVector(400, 520)
-  this.body[2] = createVector(405, 525)
-  this.wheel[0] = createVector(385, 515)
-  this.wheel[1] = createVector(385, 555)
-  this.wheel[2] = createVector(435, 515)
-  this.wheel[3] = createVector(435, 555)
-
-  this.constrain_x = function() {
+  constrain_x() {
 
     this.body[0].x = constrain(this.body[0].x, 135, 660)
     this.body[1].x = constrain(this.body[1].x, 145, 670)
@@ -26,7 +28,7 @@ function Player() {
     this.wheel[3].x = constrain(this.wheel[3].x, 180, 705)
   }
 
-  this.constrain_y = function() {
+  constrain_y() {
     this.body[0].y = constrain(this.body[0].y, 0, 540)
     this.body[1].y = constrain(this.body[1].y, 10, 550)
     this.body[2].y = constrain(this.body[2].y, 15, 555)
@@ -36,7 +38,7 @@ function Player() {
     this.wheel[3].y = constrain(this.wheel[3].y, 45, 585)
   }
 
-  this.turnRight = function() {
+  turnRight() {
 
     for (let i = 0; i < 3; i++) {
       this.body[i].x += 6;
@@ -52,7 +54,7 @@ function Player() {
 
   }
 
-  this.turnLeft = function() {
+  turnLeft() {
 
     for (let i = 0; i < 3; i++) {
       this.body[i].x -= 6;
@@ -69,7 +71,7 @@ function Player() {
 
   }
 
-  this.up = function() {
+  up() {
 
     for (let i = 0; i < 3; i++) {
       this.body[i].y -= 4;
@@ -85,7 +87,7 @@ function Player() {
 
   }
 
-  this.down = function() {
+  down() {
 
     for (let i = 0; i < 3; i++) {
       this.body[i].y += 5;
@@ -102,7 +104,7 @@ function Player() {
 
   }
 
-  this.show = function() {
+  show() {
 
     noStroke()
     fill(0);
