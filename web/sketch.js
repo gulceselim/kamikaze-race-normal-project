@@ -1,7 +1,7 @@
 let start_game = false;
 let end_game = false;
 var scoreElem = 0;
-let tree;
+let tree,roadLine,grass,player,opponent,brokenLine,introPage,gamePage,gameOverPage;
 
 function setup() {
   createCanvas(845, 600);
