@@ -8,9 +8,9 @@ class GamePage{
 
       grass.show();
 
-      if(clicked  == 1) { mod.easyMode();player.score += 0.005;}
-      if(clicked  == 2) { mod.normalMode();player.score += 0.0075;}
-      if(clicked  == 3) { mod.hardMode();player.score += 0.01;}
+      if(clicked  == 1) { mod.easyMode();player.score += 0.05;}
+      if(clicked  == 2) { mod.normalMode();player.score += 0.075;}
+      if(clicked  == 3) { mod.hardMode();player.score += 0.1;}
         
       brokenLine.show();
 
