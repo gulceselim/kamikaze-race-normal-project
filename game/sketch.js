@@ -1,7 +1,6 @@
 let start_game = false;
 let end_game = false;
-var scoreElem = 0,
-  clicked = 2;
+var scoreElem = 0,clicked = 2;
 let button_easy, button_normal, button_hard, col, col2;
 let tree, roadLine, grass, player, opponent, brokenLine, introPage, gamePage, gameOverPage, score;
 

@@ -17,7 +17,7 @@ class Player {
     push();
     fill(color(255, 215, 0));
     textSize(20);
-    text("Score = " + this.score, 605, 25);
+    text("Score = " + int(this.score), 605, 25);
     pop();
   }
 

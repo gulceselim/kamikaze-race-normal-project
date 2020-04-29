@@ -35,7 +35,7 @@ class Controller {
 
       score.position(400, 245);
       score.style('color', "BLACK");
-      score.html(player.score);
+      score.html(int(player.score));
       gameOverPage.show();
       score.show();
       player.againDraw();

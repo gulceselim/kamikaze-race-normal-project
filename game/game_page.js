@@ -8,9 +8,9 @@ class GamePage{
 
       grass.show();
 
-      if(clicked  == 1) { mod.easyMode();}
-      if(clicked  == 2) { mod.normalMode();}
-      if(clicked  == 3) { mod.hardMode();}
+      if(clicked  == 1) { mod.easyMode();player.score += 0.005;}
+      if(clicked  == 2) { mod.normalMode();player.score += 0.0075;}
+      if(clicked  == 3) { mod.hardMode();player.score += 0.01;}
         
       brokenLine.show();
 
@@ -20,7 +20,6 @@ class GamePage{
 
       tree.show();
       
-      player.score += 1;
       score.hide();
       
     }
