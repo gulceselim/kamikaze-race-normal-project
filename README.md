@@ -6,7 +6,6 @@
 
 <br>
 
-<h1 align="center">Kamikaze Race : p5js Project</h1>
 
 
 <p align="center">
