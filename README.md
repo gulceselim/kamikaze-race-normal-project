@@ -1,3 +1,10 @@
+<br>
+
+<p align="center">
+  <img width="1000" height="25" src="https://user-images.githubusercontent.com/43720773/115142916-e67f6780-a04c-11eb-9084-e1d9249ef32a.jpg">
+</p>
+
+<br>
 
 <h1 align="center">Kamikaze Race : p5js Project</h1>
 
@@ -9,9 +16,7 @@
 <br>
 <br>
 
-<p align="center">
-  <img width="1000" height="25" src="https://user-images.githubusercontent.com/43720773/115142916-e67f6780-a04c-11eb-9084-e1d9249ef32a.jpg">
-</p>
+
 
 
 
@@ -36,6 +41,7 @@
 <h1 align="center">Oyunun Özellikleri</h1>
 <p align="center">Oyun kolay, orta ve zor olmak üzere 3 kısımdan oluşuyor. Oyun kolay seviyedeyken, arabanızın hızı normalinden  yavaş  fakat skorunuz  diğer seviyelere göre daha yavaş artıyor. Orta seviyedeyken, arabanın hızı normal hızda ve skorunuz normal bir şekilde artıyor. Zor seviyedeyken, skorunuz daha hızlı artıyor fakat araba hızınız diğer seviyelere göre daha hızlı olacaktır. Oyunu bağlantıya tıklayarak oynayabilirsiniz. (https://kamikaze-race.netlify.app/)</p>
 
+<br>
 <br>
 
 <p align="center">
